@@ -1,19 +1,15 @@
-import e from 'express';
-const app = e();
+import express from 'express';
+import mainRoutes from './routers/main.routes.js'; 
 
-const PORT:number=3000;
+const app = express();
+const PORT: number = 3000;
 
-app.get('/',(req,res)=>{
-    res.send('Hello World from TypeScript with Node.js and Express!');
-})
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 
-app.get('/api/data', (req, res) => {
-    let data = req.body;
-    res.json({ message: 'This is some sample data from the API.', data });
-});
+app.use('/api/data', mainRoutes);
 
 app.listen(PORT, () => {
-    console.log('Welcome to the TypeScript with Node.js and Express setup!');
-    console.log(`Server is running on http://localhost:${PORT}`);
+  console.log('Server running at http://localhost:' + PORT);
 });
