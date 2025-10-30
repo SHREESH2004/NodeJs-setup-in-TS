@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "npx nodemon dist/index.js",
-    "dev": "nodemon src/index.js"
+    "watch": "tsc -w",
+    "dev": "concurrently \"tsc -w\" \"npx nodemon dist/index.js\""
   },
   "type": "module",
   "repository": {
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/SHREESH2004/NodeJs-setup-in-TS#readme",
   "dependencies": {
     "@types/nodemon": "^1.19.6",
+    "concurrently": "^9.2.1",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "nodemon": "^3.1.10",
