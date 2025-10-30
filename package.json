@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-setup-in-ts",
+  "version": "1.0.0",
+  "description": "basic server in ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SHREESH2004/NodeJs-setup-in-TS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SHREESH2004/NodeJs-setup-in-TS/issues"
+  },
+  "homepage": "https://github.com/SHREESH2004/NodeJs-setup-in-TS#readme"
+}
