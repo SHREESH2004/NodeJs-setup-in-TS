@@ -1,10 +1,7 @@
 import type { Request, Response } from "express";
 
-interface UserBody {
-  username: string;
-}
 
-export const getMainController = (req: Request<{}, {}, UserBody>, res: Response) => {
+export const getMainController = (req: Request, res: Response) => {
   const { username } = req.body;
 
   if (!username) {
