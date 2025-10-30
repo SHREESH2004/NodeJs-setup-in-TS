@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "nodemon dist/index.js",
+    "dev": "nodemon src/index.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SHREESH2004/NodeJs-setup-in-TS.git"
@@ -17,7 +21,14 @@
   },
   "homepage": "https://github.com/SHREESH2004/NodeJs-setup-in-TS#readme",
   "dependencies": {
+    "@types/nodemon": "^1.19.6",
     "dotenv": "^17.2.3",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "@types/node": "^24.9.2"
   }
 }
